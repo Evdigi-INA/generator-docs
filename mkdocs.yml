@@ -110,7 +110,3 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started: getting_started.md
-  - Blog:
-    - blog/index.md
-    - 2022:
-      - blog/posts/our-very-first-blog.md
