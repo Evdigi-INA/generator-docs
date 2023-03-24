@@ -23,4 +23,45 @@
 
 ## Avaiable Commands
 
-## Utilities/Helpers 
+### Install The Generator
+Install Generator Variants (Simple/Full Version)
+
+For simple version
+```sh
+php artisan generator:install simple
+```
+For full verion
+```sh
+php artisan generator:install full
+```
+
+### Set a sidebar menu
+Set a sidebar menu to fully blade code(static) or use a list from config(dynamic)
+
+Sidebar configuration place in ```config/generator.php```
+
+```sh
+php artisan generator:sidebar dynamic
+```
+
+While using static sidebar, you can free to edit the sidebar menus on ```resources/views/layouts/sidebar.blade.php```
+
+```sh
+php artisan generator:sidebar static
+```
+
+## Utilities/Helpers
+
+### Check sidebar active menus
+
+```sh
+is_active_menu(string|array): boolean
+```
+
+```php
+is_active_menu($menu);
+```
+
+### Utility class
+
+All utility function that maybe you needed, avaiable in ```EvdigiIna\Generator\Generators\GeneratorUtils```
