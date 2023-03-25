@@ -4,10 +4,10 @@ All you need is [Composer](https://getcomposer.org/), [PHP ^8.1](https://www.php
 
 ## Installation
 
-```sh
+```bash
 composer require evdigiina/generator --dev
 ```
-> For this package, there are two variations: [Simpe Version](#simple-version) and [Full Version](#full-version)
+> For this package, there are two variations: [Simple Version](#simple-version) and [Full Version](#full-version)
 
 ### Simple Version
 
@@ -16,11 +16,11 @@ composer require evdigiina/generator --dev
 
 Only the generator, includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), and [Bootstrap 5](https://getbootstrap.com/).
 
-[View all features](/features)
+[View all features](/generator-docs/features)
   
 Publish assets
 
-```sh
+```bash
 php artisan generator:install simple
 ```
 
@@ -43,7 +43,7 @@ Then goes to ```/simple-generators/create/```
 
 The generator + starter app, includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), [Laravel Fortify](https://laravel.com/docs/9.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/installation-laravel), and [Mazer Template](https://github.com/zuramai/mazer).
 
-[View all features](/features#full-version).
+[View all features](/generator-docs/features#full-version).
 
 
 > Installing this package after a brand-new Laravel installation is necessary if you want to use the full version of it. because several files will be overwritten.
@@ -52,13 +52,13 @@ The generator + starter app, includes: [Yajra Datatables](https://yajrabox.com/d
 Install [Laravel Fortify](https://laravel.com/docs/9.x/fortify) & [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/installation-laravel)
 
 
-```sh
+```bash
 composer require laravel/fortify spatie/laravel-permission
 ```
 
 Publish assets
 
-```sh
+```bash
 php artisan generator:install full
 ```
 
@@ -78,7 +78,7 @@ App\Providers\ViewComposerServiceProvider::class,
 
 Run migration and seeder
 
-```sh
+```bash
 php artisan migrate --seed
 ```
 
