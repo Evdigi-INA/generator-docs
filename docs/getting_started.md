@@ -105,13 +105,6 @@ Account
 - [Spatie permission - ^5.x](https://github.com/spatie/laravel-permission)
 - [Mazer template - ^2.x](https://github.com/zuramai/mazer/)
 
-## Pricing
-Nope, it's 100% free & open source.
+## Next step
 
-## License
-MIT.
-
-## Contributors
-<a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
-<img  src="https://contrib.rocks/image?repo=Evdigi-INA/generator&anon=1&columns=10"  />
-</a>
+Go to [Usage page](/generator-docs/usage).

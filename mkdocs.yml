@@ -120,7 +120,7 @@ nav:
   - Usage: usage.md
   - Features: features.md
   - How To Contribute: how_to_contribute.md
-  - Sponsors: sponsors.md
+  - Sponsors - Supporters: sponsors.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js

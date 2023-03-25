@@ -12,3 +12,19 @@ Currently, we don't have any upgrade guide for this time. But, we will make it s
 
 ## Who We Are
 We're just bunch of people working on side project (freelance) developer based in Bekasi, Indonesia. We want to make a difference in the world by helping people making their own projects via open source and free software such like our creation.
+
+## Pricing
+Nope, it's 100% free & open source.
+
+## License
+MIT.
+
+## Contributors
+Thank you to all our fellow contributors.
+
+<a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
+<img  src="https://contrib.rocks/image?repo=Evdigi-INA/generator&anon=1&columns=10"  />
+</a>
+
+## Sponsors
+<s>Space is available, lmao.</s>

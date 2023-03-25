@@ -36,8 +36,8 @@ php artisan generator:install full
 ```
 > Warning! That will overwrite several files, so use caution while using this command and avoid using it more than once.
 
-### Set a sidebar menu
-Set a sidebar menu to fully blade code(static) or use a list from config(dynamic)
+### Set the sidebar menu
+Set the sidebar menu to fully blade code(static) or use a list from config(dynamic)
 
 Sidebar configuration place in ```config/generator.php```
 
@@ -266,18 +266,45 @@ GeneratorUtils::setDefaultImage(null|string $default, string $field, string $mod
 GeneratorUtils::convertArraySidebarToString(array $sidebars): string
 ```
 
-### Upcoming Features
-- API CRUD
+### Things that we want to add in the future
+- API CRUD generator
 - API docs
 - Can create more relation type
 - Upload file except image
 - CRUD with desain pattern(Service/Repository Pattern)
-- Laravel table Pagination
+- Laravel table pagination
 - Import/Export csv
 - Input for custom table name
-- Change requst validation as an array
+- Change request validation as an array
 - Add a checkbox for whether to use route model binding or not
 - Add a checkbox to turn off automatic pluralization
-- If the time zone is set to Indonesia, disable pluralization
+- If the time zone is set to Indonesia, then disable pluralization
+- Add username to users table
 - New template admin
-- ...
+- Option to auto migrate table or not
+- Add config for showing an image in the data table or not
+- ability to hide/show the field on the view page
+- Configuration to limit showing fields in the index page
+- Can select the field that will be showing in belongsTo the relation
+- The generator can make seeder and factory
+- Add default config for minimum & maximum length to column type string
+- The generator can make subfolders for request class validation
+- Add configuration for image type rounded or square
+- Add support for diffForHumans() to input type date.
+- Can custom validation(write-in input)
+- The generator can use caching
+- The generator can create policy
+- The generator can create model observer
+- Use database transaction
+- The generator can create mutator & casting
+- Configuration for upload file to S3
+- Add soft delete option
+- If the model is in a subfolder then the route will use the sub-route
+- Add unit test for the generator
+- The generator can create unit test
+- Add notification if the user changed their email or password (package)
+- Add activity log (package)
+- Add backup database (package)
+- The Generator uses enum class for column type enum
+
+> The list is subject to change at any time and features may be added in any order.
