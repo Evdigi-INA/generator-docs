@@ -1,6 +1,6 @@
 [Generator](https://github.com/Zzzul/generator) is a Laravel-based open-source toolkit for building basic needs for administration interface setup like Create, Read, Update, and Delete. It's the minimalistic template or a starting point for developing CMS system, admin panel, or any other web application that requires CRUD functionality.
 
-<video width="90%" height="80%" controls>
+<video width="100%" height="90%" controls>
   <source src="https://user-images.githubusercontent.com/62506582/200510814-9b2ca922-bd35-4e02-a236-047c4b7b118d.mp4" type="video/mp4">
 </video>
 
@@ -19,12 +19,12 @@ Nope, it's 100% free & open source.
 ## License
 MIT.
 
+## Sponsors
+<s>Space is available, lmao.</s>
+
 ## Contributors
 Thank you to all our fellow contributors.
 
 <a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
 <img  src="https://contrib.rocks/image?repo=Evdigi-INA/generator&anon=1&columns=10"  />
 </a>
-
-## Sponsors
-<s>Space is available, lmao.</s>

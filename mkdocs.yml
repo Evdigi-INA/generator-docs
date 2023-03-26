@@ -10,6 +10,13 @@ repo_url: https://github.com/Evdigi-INA/generator
 # Copyright
 copyright: Copyright &copy; 2022 - now()
 
+# Plugins
+plugins:
+  - search:
+      separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
+
 theme:
   name: material
   features:
@@ -25,6 +32,7 @@ theme:
     - navigation.sections
     - navigation.tabs.sticky
     - navigation.top
+    - navigation.footer
     - navigation.tracking
     - search.highlight
     - search.share
@@ -56,6 +64,8 @@ theme:
 
 # Customization
 extra:
+  annotate:
+    json: [.s2]
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/Evdigi-INA/generator
@@ -120,7 +130,7 @@ nav:
   - Usage: usage.md
   - Features: features.md
   - How To Contribute: how_to_contribute.md
-  - Sponsors - Supporters: sponsors.md
+  - Sponsors / Supporters: sponsors.md
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js

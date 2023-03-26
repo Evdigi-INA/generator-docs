@@ -1,4 +1,4 @@
-## Create your first CRUD's
+## Create your first CRUD
 
 Go to ```/generators/create``` if yo're using [Full Version](/features#full-version) or ```/simple-generators/create``` for [Simple Version](/features)
 

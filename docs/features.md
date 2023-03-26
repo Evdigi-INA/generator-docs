@@ -12,6 +12,7 @@
 ### Full Version
   
 - [x] CRUD Generator
+- [x] Configurable sidebar menus
 - [x] CRUD User
 - [x] Roles and permissions ([Spatie Permission](https://spatie.be/docs/laravel-permission/v5/introduction))
 - [x] Authentication ([Laravel Fortify](https://laravel.com/docs/9.x/fortify))
@@ -55,12 +56,8 @@ php artisan generator:sidebar static
 
 ### Check sidebar active menus
 
-```sh
-is_active_menu(string|array): boolean
-```
-
 ```php
-is_active_menu($menu);
+is_active_menu(string|array $menu): boolean;
 ```
 
 ### Utility class

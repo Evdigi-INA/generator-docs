@@ -103,8 +103,4 @@ Account
 - [Intervention Image - ^2.x](https://image.intervention.io/v2)
 - [Laravel Forify - ^1.x](https://laravel.com/docs/9.x/fortify)
 - [Spatie permission - ^5.x](https://github.com/spatie/laravel-permission)
-- [Mazer template - ^2.x](https://github.com/zuramai/mazer/)
-
-## Next step
-
-Go to [Usage page](/generator-docs/usage).
+- [Mazer template - ^2.x](https://github.com/zuramai/mazer/) 
