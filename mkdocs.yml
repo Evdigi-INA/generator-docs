@@ -14,8 +14,6 @@ copyright: Copyright &copy; 2022 - now()
 plugins:
   - search:
       separator: '[\s\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - minify:
-      minify_html: true
 
 theme:
   name: material
