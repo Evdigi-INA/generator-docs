@@ -38,7 +38,7 @@ php artisan generator:install full
 > Warning! That will overwrite several files, so use caution while using this command and avoid using it more than once.
 
 ### Set the sidebar menu
-Set the sidebar menu to fully blade code(static) or use a list from config(dynamic)
+Set the sidebar menu to fully blade code (static) or use a list from config (dynamic)
 
 Sidebar configuration place in ```config/generator.php```
 
@@ -46,11 +46,12 @@ Sidebar configuration place in ```config/generator.php```
 php artisan generator:sidebar dynamic
 ```
 
-While using static sidebar, you can free to edit the sidebar menus on ```resources/views/layouts/sidebar.blade.php```
+While using static sidebar menu, you feel free to edit the sidebar menus on ```resources/views/layouts/sidebar.blade.php```
 
 ```sh
 php artisan generator:sidebar static
 ```
+> After you create a new module using the generator, sidebar will automatically comeback to set dynamic
 
 ## Utilities/Helpers
 
@@ -303,5 +304,6 @@ GeneratorUtils::convertArraySidebarToString(array $sidebars): string
 - Add activity log (package)
 - Add backup database (package)
 - The Generator uses enum class for column type enum
+- Refactor code
 
 > The list is subject to change at any time and features may be added in any order.

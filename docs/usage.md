@@ -2,22 +2,61 @@
 
 Go to ```/generators/create``` if yo're using [Full Version](/features#full-version) or ```/simple-generators/create``` for [Simple Version](/features)
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a. Aliquam tempus dui a mi euismod, at scelerisque neque lobortis. Vestibulum nec eros id ante aliquam luctus vitae et lectus. Cras eleifend velit velit, gravida auctor justo ultricies vel. Morbi vehicula lacus ac cursus rutrum.
+Below is table about supported input type & validation when you are using some column type.
+
+|Columm Type|Input Type|Validation|Length (min & max)|
+|-----------|----------|----------|------------------|
+|`string`|`text, textarea, email, telephone, password url, search, file, hidden`|`required|string`| ✅ |
+|`integer`|`number, range, hidden`|`required|numeric`| ✅ |
+|`text`|`text, textarea, email, telephone, password url, search, file, hidden`|`required|string`| ✅ |
+|`booelan`|`radio, select, datalist`|`required|booelan`| ❌ |
+|`char`|`text, color, week, email, telephone, password url, search, file, hidden`|`required|string`| ✅ |
+|`date`|`date, month`|`required|date`| ❌ |
+|`time`|`time`|`required|date`| ❌ |
+|`year`|`select, datalist`|`required|numeric`| ❌ |
+|`dateTime`|`datetime-local`|`required|date`| ❌ |
+|`decimal`|`number, range, hidden`|`required|numeric`| ❌ |
+|`double`|`number, range, hidden`|`required|numeric`| ❌ |
+|`enum`|`select, readio, datalist`|`required|in`| ❌ |
+|`float`|`number, range, hidden`|`required|numeric`| ❌ |
+|`foreignId`|`select, datalist`|`required|exist`| ❌ |
+|`tinyInteger`|`number, range, hidden`|`required|numeric`| ❌ |
+|`mediumInteger`|`number, range, hidden`|`required|numeric`| ❌ |
+|`bigInteger`|`number, range, hidden`|`required|numeric`| ❌ |
+|`tinyText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required|string`| ✅ |
+|`mediumText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required|string`| ✅ |
+|`longText`|`text, textarea, email, telephone, password url, search, file, hidden`|`required|string`| ✅ |
+
+> `required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
+
 
 ## Create Relation
 For now is only support [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a. Aliquam tempus dui a mi euismod, at scelerisque neque lobortis. Vestibulum nec eros id ante aliquam luctus vitae et lectus. Cras eleifend velit velit, gravida auctor justo ultricies vel. Morbi vehicula lacus ac cursus rutrum
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a.
 
 ## Create Upload File
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a. Aliquam tempus dui a mi euismod, at scelerisque neque lobortis. Vestibulum nec eros id ante aliquam luctus vitae et lectus. Cras eleifend velit velit, gravida auctor justo ultricies vel. Morbi vehicula lacus ac cursus rutrum
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a.
+
+> if you are using `storage` for store the image, make sure you run `php artisan storage:link`
+
+
+## Create sidebar menu
+
+![Create sidebar menu](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
+
+> This feature only avaiable in full version.
+
+You can easily create a dynamic sidebar menus  with just a few input. all sidebar menus configuration place in `config/generator.php`
+
+How about i dont need dynamic sidebar menu, i just want create my menu in `blade`? yeah we provide it, [click here how to do it](/generator-docs/features/#set-the-sidebar-menu).
+
 
 ## Configuration
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a. Aliquam tempus dui a mi euismod, at scelerisque neque lobortis. Vestibulum nec eros id ante aliquam luctus vitae et lectus. Cras eleifend velit velit, gravida auctor justo ultricies vel. Morbi vehicula lacus ac cursus rutrum
+Below is the default config for the generator and sidebar menus:
 
-Below is the default config:
 ```php
 return [
     /**

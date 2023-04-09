@@ -87,6 +87,7 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
   - abbr
+  - tables
   - admonition
   - attr_list
   - def_list
@@ -125,8 +126,8 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting Started: getting_started.md
-  - Usage: usage.md
   - Features: features.md
+  - Usage: usage.md
   - How To Contribute: how_to_contribute.md
   - Sponsors / Supporters: sponsors.md
 
