@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../usage/">
+        <link rel="prev" href="../getting_started/">
       
       
-        <link rel="next" href="../how_to_contribute/">
+        <link rel="next" href="../usage/">
       
       <link rel="icon" href="../assets/62506582.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
@@ -288,21 +288,6 @@
 
   
   
-  
-    <li class="md-nav__item">
-      <a href="../usage/" class="md-nav__link">
-        Usage
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
     
   
   
@@ -353,6 +338,26 @@
     Avaiable Commands
   </a>
   
+    <nav class="md-nav" aria-label="Avaiable Commands">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-the-generator" class="md-nav__link">
+    Install The Generator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-the-sidebar-menu" class="md-nav__link">
+    Set the sidebar menu
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -360,12 +365,54 @@
     Utilities/Helpers
   </a>
   
+    <nav class="md-nav" aria-label="Utilities/Helpers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#check-sidebar-active-menus" class="md-nav__link">
+    Check sidebar active menus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#utility-class" class="md-nav__link">
+    Utility class
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#things-that-we-want-to-add-in-the-future" class="md-nav__link">
+    Things that we want to add in the future
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        Usage
+      </a>
     </li>
   
 
@@ -394,7 +441,7 @@
   
     <li class="md-nav__item">
       <a href="../sponsors/" class="md-nav__link">
-        Sponsors
+        Sponsors / Supporters
       </a>
     </li>
   
@@ -436,6 +483,7 @@
 <h3 id="full-version">Full Version<a class="headerlink" href="#full-version" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> CRUD Generator</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Configurable sidebar menus</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> CRUD User</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Roles and permissions (<a href="https://spatie.be/docs/laravel-permission/v5/introduction">Spatie Permission</a>)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Authentication (<a href="https://laravel.com/docs/9.x/fortify">Laravel Fortify</a>)<ul>
@@ -448,7 +496,271 @@
 </li>
 </ul>
 <h2 id="avaiable-commands">Avaiable Commands<a class="headerlink" href="#avaiable-commands" title="Permanent link">&para;</a></h2>
+<h3 id="install-the-generator">Install The Generator<a class="headerlink" href="#install-the-generator" title="Permanent link">&para;</a></h3>
+<p>Install Generator Variants (Simple/Full Version)</p>
+<p>For simple version
+<pre class="highlight"><code class="language-sh">php artisan generator:install simple</code></pre>
+For full verion
+<pre class="highlight"><code class="language-sh">php artisan generator:install full</code></pre></p>
+<blockquote>
+<p>Warning! That will overwrite several files, so use caution while using this command and avoid using it more than once.</p>
+</blockquote>
+<h3 id="set-the-sidebar-menu">Set the sidebar menu<a class="headerlink" href="#set-the-sidebar-menu" title="Permanent link">&para;</a></h3>
+<p>Set the sidebar menu to fully blade code (static) or use a list from config (dynamic)</p>
+<p>Sidebar configuration place in <code>config/generator.php</code></p>
+<pre class="highlight"><code class="language-sh">php artisan generator:sidebar dynamic</code></pre>
+<p>While using static sidebar menu, you feel free to edit the sidebar menus on <code>resources/views/layouts/sidebar.blade.php</code></p>
+<pre class="highlight"><code class="language-sh">php artisan generator:sidebar static</code></pre>
+<blockquote>
+<p>After you create a new module using the generator, sidebar will automatically comeback to set dynamic</p>
+</blockquote>
 <h2 id="utilitieshelpers">Utilities/Helpers<a class="headerlink" href="#utilitieshelpers" title="Permanent link">&para;</a></h2>
+<h3 id="check-sidebar-active-menus">Check sidebar active menus<a class="headerlink" href="#check-sidebar-active-menus" title="Permanent link">&para;</a></h3>
+<pre class="highlight"><code class="language-php">is_active_menu(string|array $menu): boolean;</code></pre>
+<h3 id="utility-class">Utility class<a class="headerlink" href="#utility-class" title="Permanent link">&para;</a></h3>
+<p>All utility functions that you maybe need, are available in <code>EvdigiIna\Generator\Generators\GeneratorUtils</code></p>
+<pre class="highlight"><code class="language-php">use EvdigiIna\Generator\Generators\GeneratorUtils;
+
+/**
+* Get template/stub file.
+*
+* @param string $path
+* @return string
+*/
+GeneratorUtils::getTemplate(string $path): string
+
+/**
+* Check folder if doesnt exist, then make folder.
+*
+* @param string $path
+* @return void
+*/
+GeneratorUtils::checkFolder(string $path): void
+
+/**
+* Convert string to singular pascal case.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::singularPascalCase(string $string): string
+
+/**
+* Convert string to singular pascal case.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::pascalCase(string $string): string
+
+/**
+* Convert string to plural pascal case.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::pluralPascalCase(string $string): string
+
+/**
+* Convert string to plural snake case.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::pluralSnakeCase(string $string): string
+
+/**
+* Convert string to singular snake case.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::singularSnakeCase(string $string): string
+
+/**
+* Convert string to plural pascal case.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::pluralCamelCase(string $string): string
+
+/**
+* Convert string to singular pascal case.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::singularCamelCase(string $string): string
+
+/**
+* Convert string to plural, kebab case, and lowercase.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::pluralKebabCase(string $string): string
+
+/**
+* Convert string kebab case, and lowercase.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::kebabCase(string $string): string
+
+/**
+* Convert string to singular, kebab case, and lowercase.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::singularKebabCase(string $string): string
+
+/**
+* Convert string to singular, remove special caracters, and lowercase.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::cleanSingularLowerCase(string $string): string
+
+/**
+* Remove special caracters, and lowercase.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::cleanLowerCase(string $string): string
+
+/**
+* Convert string to plural, remove special caracters, and uppercase every first letters.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::cleanPluralUcWords(string $string): string
+
+/**
+* Convert string to singular, remove special caracters, and uppercase every first letters.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::cleanSingularUcWords(string $string): string
+
+/**
+* Remove special caracters, and uppercase every first letters.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::cleanUcWords(string $string): string
+
+/**
+* Convert string to plural, remove special caracters, and lowercase.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::cleanPluralLowerCase(string $string): string
+
+/**
+* Get 1 column after id on the table.
+*
+* @param string $table
+* @return string $column
+*/
+GeneratorUtils::getColumnAfterId(string $table): string
+
+/**
+* Select id and column after id on the table.
+*
+* @param string $table
+* @return string $selectedField
+*/
+GeneratorUtils::selectColumnAfterIdAndIdItself(string $table): string
+
+/**
+* Converts camelCase string to have spaces between each.
+*
+* @param string $string
+* @return string
+*/
+GeneratorUtils::fromCamelCase(string $string): string
+
+/**
+* Set model name from the latest of array(if exists).
+*
+* @param string $model
+* @param string $style
+* @return string
+*/
+GeneratorUtils::setModelName(string $model, string $style = 'pascal case'): string
+
+/**
+* Set default image and code to controller.
+*
+* @param null|string $default,
+* @param string $field
+* @param string $model
+* @return array
+*/
+GeneratorUtils::setDefaultImage(null|string $default, string $field, string $model): array
+
+/**
+* Convert array from config to string like array.
+*
+* @param array $idebars
+* @return string
+*/
+GeneratorUtils::convertArraySidebarToString(array $sidebars): string</code></pre>
+<h3 id="things-that-we-want-to-add-in-the-future">Things that we want to add in the future<a class="headerlink" href="#things-that-we-want-to-add-in-the-future" title="Permanent link">&para;</a></h3>
+<ul>
+<li>API CRUD generator</li>
+<li>API docs</li>
+<li>Can create more relation type</li>
+<li>Upload file except image</li>
+<li>CRUD with desain pattern(Service/Repository Pattern)</li>
+<li>Laravel table pagination</li>
+<li>Import/Export csv</li>
+<li>Input for custom table name</li>
+<li>Change request validation as an array</li>
+<li>Add a checkbox for whether to use route model binding or not</li>
+<li>Add a checkbox to turn off automatic pluralization</li>
+<li>If the time zone is set to Indonesia, then disable pluralization</li>
+<li>Add username to users table</li>
+<li>New template admin</li>
+<li>Option to auto migrate table or not</li>
+<li>Add config for showing an image in the data table or not</li>
+<li>ability to hide/show the field on the view page</li>
+<li>Configuration to limit showing fields in the index page</li>
+<li>Can select the field that will be showing in belongsTo the relation</li>
+<li>The generator can make seeder and factory</li>
+<li>Add default config for minimum &amp; maximum length to column type string</li>
+<li>The generator can make subfolders for request class validation</li>
+<li>Add configuration for image type rounded or square</li>
+<li>Add support for diffForHumans() to input type date.</li>
+<li>Can custom validation(write-in input)</li>
+<li>The generator can use caching</li>
+<li>The generator can create policy</li>
+<li>The generator can create model observer</li>
+<li>Use database transaction</li>
+<li>The generator can create mutator &amp; casting</li>
+<li>Configuration for upload file to S3</li>
+<li>Add soft delete option</li>
+<li>If the model is in a subfolder then the route will use the sub-route</li>
+<li>Add unit test for the generator</li>
+<li>The generator can create unit test</li>
+<li>Add notification if the user changed their email or password (package)</li>
+<li>Add activity log (package)</li>
+<li>Add backup database (package)</li>
+<li>The Generator uses enum class for column type enum</li>
+<li>Refactor code</li>
+</ul>
+<blockquote>
+<p>The list is subject to change at any time and features may be added in any order.</p>
+</blockquote>
 
 
 
@@ -471,6 +783,44 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../getting_started/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Getting Started" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../usage/" class="md-footer__link md-footer__link--next" aria-label="Next: Usage" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Usage
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -517,7 +867,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.prune", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.prune", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>

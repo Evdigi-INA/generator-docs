@@ -16,7 +16,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../usage/">
+        <link rel="next" href="../features/">
       
       <link rel="icon" href="../assets/62506582.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
@@ -365,27 +365,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#pricing" class="md-nav__link">
-    Pricing
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#license" class="md-nav__link">
-    License
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#contributors" class="md-nav__link">
-    Contributors
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -402,8 +381,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/" class="md-nav__link">
-        Usage
+      <a href="../features/" class="md-nav__link">
+        Features
       </a>
     </li>
   
@@ -417,8 +396,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../features/" class="md-nav__link">
-        Features
+      <a href="../usage/" class="md-nav__link">
+        Usage
       </a>
     </li>
   
@@ -448,7 +427,7 @@
   
     <li class="md-nav__item">
       <a href="../sponsors/" class="md-nav__link">
-        Sponsors
+        Sponsors / Supporters
       </a>
     </li>
   
@@ -477,16 +456,16 @@
 <h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
 <p>All you need is <a href="https://getcomposer.org/">Composer</a>, <a href="https://www.php.net/releases/8.1/en.php">PHP ^8.1</a>, and <a href="http://laravel.com/">Laravel ^9.x</a>.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<pre class="highlight"><code class="language-sh">composer require evdigiina/generator --dev</code></pre>
+<pre class="highlight"><code class="language-bash">composer require evdigiina/generator --dev</code></pre>
 <blockquote>
-<p>For this package, there are two variations: <a href="#simple-version">Simpe Version</a> and <a href="#full-version">Full Version</a></p>
+<p>For this package, there are two variations: <a href="#simple-version">Simple Version</a> and <a href="#full-version">Full Version</a></p>
 </blockquote>
 <h3 id="simple-version">Simple Version<a class="headerlink" href="#simple-version" title="Permanent link">&para;</a></h3>
 <p><img alt="image" src="https://user-images.githubusercontent.com/62506582/219941448-94c46fca-6a9f-422b-bdd1-29f642c3ccf6.png" /></p>
 <p>Only the generator, includes: <a href="https://yajrabox.com/docs/laravel-datatables/master/installation">Yajra Datatables</a>, <a href="https://image.intervention.io/v2">Intervention Image</a>, and <a href="https://getbootstrap.com/">Bootstrap 5</a>.</p>
-<p><a href="/features">View all features</a></p>
+<p><a href="/generator-docs/features">View all features</a></p>
 <p>Publish assets</p>
-<pre class="highlight"><code class="language-sh">php artisan generator:install simple</code></pre>
+<pre class="highlight"><code class="language-bash">php artisan generator:install simple</code></pre>
 <p>Register the provider in <code>config/app.php</code></p>
 <pre class="highlight"><code class="language-php">/*
 * Package Service Providers...
@@ -498,14 +477,14 @@ App\Providers\ViewComposerServiceProvider::class,</code></pre>
 <h3 id="full-version">Full Version<a class="headerlink" href="#full-version" title="Permanent link">&para;</a></h3>
 <p><img alt="image" src="https://user-images.githubusercontent.com/62506582/219942571-63c42764-1702-4df3-b165-4217e5558713.png" /></p>
 <p>The generator + starter app, includes: <a href="https://yajrabox.com/docs/laravel-datatables/master/installation">Yajra Datatables</a>, <a href="https://image.intervention.io/v2">Intervention Image</a>, <a href="https://laravel.com/docs/9.x/fortify">Laravel Fortify</a>, <a href="https://spatie.be/docs/laravel-permission/v5/installation-laravel">Spatie Permission</a>, and <a href="https://github.com/zuramai/mazer">Mazer Template</a>.</p>
-<p><a href="/features#full-version">View all features</a>.</p>
+<p><a href="/generator-docs/features#full-version">View all features</a>.</p>
 <blockquote>
 <p>Installing this package after a brand-new Laravel installation is necessary if you want to use the full version of it. because several files will be overwritten.</p>
 </blockquote>
 <p>Install <a href="https://laravel.com/docs/9.x/fortify">Laravel Fortify</a> &amp; <a href="https://spatie.be/docs/laravel-permission/v5/installation-laravel">Spatie Permission</a></p>
-<pre class="highlight"><code class="language-sh">composer require laravel/fortify spatie/laravel-permission</code></pre>
+<pre class="highlight"><code class="language-bash">composer require laravel/fortify spatie/laravel-permission</code></pre>
 <p>Publish assets</p>
-<pre class="highlight"><code class="language-sh">php artisan generator:install full</code></pre>
+<pre class="highlight"><code class="language-bash">php artisan generator:install full</code></pre>
 <blockquote>
 <p>Warning! Be careful with this command, it will overwrite several files, don't run it multiple times.</p>
 </blockquote>
@@ -518,7 +497,7 @@ App\Providers\FortifyServiceProvider::class,
 Spatie\Permission\PermissionServiceProvider::class,
 App\Providers\ViewComposerServiceProvider::class,</code></pre>
 <p>Run migration and seeder</p>
-<pre class="highlight"><code class="language-sh">php artisan migrate --seed</code></pre>
+<pre class="highlight"><code class="language-bash">php artisan migrate --seed</code></pre>
 <p>Then goes to <code>/generators/create</code></p>
 <p>Account</p>
 <ul>
@@ -538,16 +517,8 @@ App\Providers\ViewComposerServiceProvider::class,</code></pre>
 <li><a href="https://image.intervention.io/v2">Intervention Image - ^2.x</a></li>
 <li><a href="https://laravel.com/docs/9.x/fortify">Laravel Forify - ^1.x</a></li>
 <li><a href="https://github.com/spatie/laravel-permission">Spatie permission - ^5.x</a></li>
-<li><a href="https://github.com/zuramai/mazer/">Mazer template - ^2.x</a></li>
+<li><a href="https://github.com/zuramai/mazer/">Mazer template - ^2.x</a> </li>
 </ul>
-<h2 id="pricing">Pricing<a class="headerlink" href="#pricing" title="Permanent link">&para;</a></h2>
-<p>Nope, it's 100% free &amp; open source.</p>
-<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
-<p>MIT.</p>
-<h2 id="contributors">Contributors<a class="headerlink" href="#contributors" title="Permanent link">&para;</a></h2>
-<p><a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
-<img  src="https://contrib.rocks/image?repo=Evdigi-INA/generator&anon=1&columns=10"  />
-</a></p>
 
 
 
@@ -570,6 +541,44 @@ App\Providers\ViewComposerServiceProvider::class,</code></pre>
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Home" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../features/" class="md-footer__link md-footer__link--next" aria-label="Next: Features" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                Features
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -616,7 +625,7 @@ App\Providers\ViewComposerServiceProvider::class,</code></pre>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.prune", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.prune", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>

@@ -31,9 +31,24 @@ Below is table about supported input type & validation when you are using some c
 
 
 ## Create Relation
+
+![Create Relation](https://user-images.githubusercontent.com/62506582/230761648-1ef36018-2486-424b-831f-ae5f74a66705.png)
+
 For now is only support [One To Many (Inverse) / Belongs To](https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a.
+There is rules you must be followed if you want create a a relation:
+
+- Field name: 
+    - Must be table name but in singular + `_id`, eg: we have `users` table then its must be `user_id`.
+- Column Type:
+    - Change to `foreignId`.
+    - For constrain or related model name, you can fill with table name or model namespcae.
+    - Action on update & delete:
+        - On update: `nothing, cascade, restrict`
+        - On delete: `nothing, cascade, restrict, null`
+
+
+> Make sure related table & model already exist, if its no then the selected field for showing in `select`/`datalist` is an `id` by default selected field is second column in related table.
 
 ## Create Upload File
 

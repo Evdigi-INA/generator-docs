@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="../getting_started/">
+        <link rel="prev" href="../features/">
       
       
-        <link rel="next" href="../features/">
+        <link rel="next" href="../how_to_contribute/">
       
       <link rel="icon" href="../assets/62506582.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.3">
@@ -77,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#create-your-first-cruds" class="md-skip">
+        <a href="#create-your-first-crud" class="md-skip">
           Skip to content
         </a>
       
@@ -288,6 +288,21 @@
 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        Features
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
     
   
   
@@ -320,8 +335,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-your-first-cruds" class="md-nav__link">
-    Create your first CRUD's
+  <a href="#create-your-first-crud" class="md-nav__link">
+    Create your first CRUD
   </a>
   
 </li>
@@ -341,6 +356,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#create-sidebar-menu" class="md-nav__link">
+    Create sidebar menu
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#configuration" class="md-nav__link">
     Configuration
   </a>
@@ -351,21 +373,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../features/" class="md-nav__link">
-        Features
-      </a>
     </li>
   
 
@@ -394,7 +401,7 @@
   
     <li class="md-nav__item">
       <a href="../sponsors/" class="md-nav__link">
-        Sponsors
+        Sponsors / Supporters
       </a>
     </li>
   
@@ -420,16 +427,322 @@
 
   <h1>Usage</h1>
 
-<h2 id="create-your-first-cruds">Create your first CRUD's<a class="headerlink" href="#create-your-first-cruds" title="Permanent link">&para;</a></h2>
-<p>Go to <code>/generators/create</code> if yo're using <a href="/features#full-version">Full Version</a> or <code>simple-generators/create</code> for <a href="/features">Simple Version</a></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a. Aliquam tempus dui a mi euismod, at scelerisque neque lobortis. Vestibulum nec eros id ante aliquam luctus vitae et lectus. Cras eleifend velit velit, gravida auctor justo ultricies vel. Morbi vehicula lacus ac cursus rutrum.</p>
+<h2 id="create-your-first-crud">Create your first CRUD<a class="headerlink" href="#create-your-first-crud" title="Permanent link">&para;</a></h2>
+<p>Go to <code>/generators/create</code> if yo're using <a href="/features#full-version">Full Version</a> or <code>/simple-generators/create</code> for <a href="/features">Simple Version</a></p>
+<p>Below is table about supported input type &amp; validation when you are using some column type.</p>
+<table>
+<thead>
+<tr>
+<th>Columm Type</th>
+<th>Input Type</th>
+<th>Validation</th>
+<th>Length (min &amp; max)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>text, textarea, email, telephone, password url, search, file, hidden</code></td>
+<td><code>required|string</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>integer</code></td>
+<td><code>number, range, hidden</code></td>
+<td><code>required|numeric</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td><code>text, textarea, email, telephone, password url, search, file, hidden</code></td>
+<td><code>required|string</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>booelan</code></td>
+<td><code>radio, select, datalist</code></td>
+<td><code>required|booelan</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td><code>text, color, week, email, telephone, password url, search, file, hidden</code></td>
+<td><code>required|string</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>date</code></td>
+<td><code>date, month</code></td>
+<td><code>required|date</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>time</code></td>
+<td><code>time</code></td>
+<td><code>required|date</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>year</code></td>
+<td><code>select, datalist</code></td>
+<td><code>required|numeric</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>dateTime</code></td>
+<td><code>datetime-local</code></td>
+<td><code>required|date</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>decimal</code></td>
+<td><code>number, range, hidden</code></td>
+<td><code>required|numeric</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td><code>number, range, hidden</code></td>
+<td><code>required|numeric</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>enum</code></td>
+<td><code>select, readio, datalist</code></td>
+<td><code>required|in</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td><code>number, range, hidden</code></td>
+<td><code>required|numeric</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>foreignId</code></td>
+<td><code>select, datalist</code></td>
+<td><code>required|exist</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>tinyInteger</code></td>
+<td><code>number, range, hidden</code></td>
+<td><code>required|numeric</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>mediumInteger</code></td>
+<td><code>number, range, hidden</code></td>
+<td><code>required|numeric</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>bigInteger</code></td>
+<td><code>number, range, hidden</code></td>
+<td><code>required|numeric</code></td>
+<td>❌</td>
+</tr>
+<tr>
+<td><code>tinyText</code></td>
+<td><code>text, textarea, email, telephone, password url, search, file, hidden</code></td>
+<td><code>required|string</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>mediumText</code></td>
+<td><code>text, textarea, email, telephone, password url, search, file, hidden</code></td>
+<td><code>required|string</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>longText</code></td>
+<td><code>text, textarea, email, telephone, password url, search, file, hidden</code></td>
+<td><code>required|string</code></td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><code>required</code> validation will change to <code>nullable</code> if you uncheck required switch in the form, if any input type <code>password</code> will automatically added <code>confirmed</code> validation, <code>min:1|max:100</code> for supported length column and <code>email|unique</code> for <code>email</code> input type.</p>
+</blockquote>
 <h2 id="create-relation">Create Relation<a class="headerlink" href="#create-relation" title="Permanent link">&para;</a></h2>
 <p>For now is only support <a href="https://laravel.com/docs/10.x/eloquent-relationships#one-to-many-inverse">One To Many (Inverse) / Belongs To</a>.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a. Aliquam tempus dui a mi euismod, at scelerisque neque lobortis. Vestibulum nec eros id ante aliquam luctus vitae et lectus. Cras eleifend velit velit, gravida auctor justo ultricies vel. Morbi vehicula lacus ac cursus rutrum</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a.</p>
 <h2 id="create-upload-file">Create Upload File<a class="headerlink" href="#create-upload-file" title="Permanent link">&para;</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a. Aliquam tempus dui a mi euismod, at scelerisque neque lobortis. Vestibulum nec eros id ante aliquam luctus vitae et lectus. Cras eleifend velit velit, gravida auctor justo ultricies vel. Morbi vehicula lacus ac cursus rutrum</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a.</p>
+<blockquote>
+<p>if you are using <code>storage</code> for store the image, make sure you run <code>php artisan storage:link</code></p>
+</blockquote>
+<h2 id="create-sidebar-menu">Create sidebar menu<a class="headerlink" href="#create-sidebar-menu" title="Permanent link">&para;</a></h2>
+<p><img alt="Create sidebar menu" src="https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png" /></p>
+<blockquote>
+<p>This feature only avaiable in full version.</p>
+</blockquote>
+<p>You can easily create a dynamic sidebar menus  with just a few input. all sidebar menus configuration place in <code>config/generator.php</code></p>
+<p>How about i dont need dynamic sidebar menu, i just want create my menu in <code>blade</code>? yeah we provide it, <a href="/generator-docs/features/#set-the-sidebar-menu">click here how to do it</a>.</p>
 <h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a. Aliquam tempus dui a mi euismod, at scelerisque neque lobortis. Vestibulum nec eros id ante aliquam luctus vitae et lectus. Cras eleifend velit velit, gravida auctor justo ultricies vel. Morbi vehicula lacus ac cursus rutrum</p>
+<p>Below is the default config for the generator and sidebar menus:</p>
+<pre class="highlight"><code class="language-php">return [
+    /**
+     * If any input file(image) as default will used options below.
+     */
+    'image' =&gt; [
+        /**
+         * Path for store the image.
+         *
+         * avaiable options:
+         * 1. public
+         * 2. storage
+         */
+        'path' =&gt; 'storage',
+
+        /**
+         * Will used if image is nullable and default value is null.
+         */
+        'default' =&gt; 'https://via.placeholder.com/350?text=No+Image+Avaiable',
+
+        /**
+         * Crop the uploaded image using intervention image.
+         */
+        'crop' =&gt; true,
+
+        /**
+         * When set to true the uploaded image aspect ratio will still original.
+         */
+        'aspect_ratio' =&gt; true,
+
+        /**
+         * Crop image size.
+         */
+        'width' =&gt; 500,
+        'height' =&gt; 500,
+    ],
+
+    'format' =&gt; [
+        /**
+         * Will used to first year on select, if any column type year.
+         */
+        'first_year' =&gt; 1900,
+
+        /**
+         * If any date column type will cast and display used this format, but for input date still will used Y-m-d format.
+         *
+         * another most common format:
+         * - M d Y
+         * - d F Y
+         * - Y m d
+         */
+        'date' =&gt; 'd/m/Y',
+
+        /**
+         * If any input type month will cast and display used this format.
+         */
+        'month' =&gt; 'm/Y',
+
+        /**
+         * If any input type time will cast and display used this format.
+         */
+        'time' =&gt; 'H:i',
+
+        /**
+         * If any datetime column type or datetime-local on input, will cast and display used this format.
+         */
+        'datetime' =&gt; 'd/m/Y H:i',
+
+        /**
+         * Limit string on index view for any column type text or longtext.
+         */
+        'limit_text' =&gt; 100,
+    ],
+
+    /**
+     * It will used for generator to manage and showing menus on sidebar views.
+     *
+     * Example:
+     * [
+     *   'header' =&gt; 'Main',
+     *
+     *   // All permissions in menus[] and submenus[]
+     *   'permissions' =&gt; ['test view'],
+     *
+     *   menus' =&gt; [
+     *       [
+     *          'title' =&gt; 'Main Data',
+     *          'icon' =&gt; '&lt;i class="bi bi-collection-fill"&gt;&lt;/i&gt;',
+     *          'route' =&gt; null,
+     *
+     *          // permission always null when isset submenus
+     *          'permission' =&gt; null,
+     *
+     *          // All permissions on submenus[] and will empty[] when submenus equals to []
+     *          'permissions' =&gt; ['test view'],
+     *
+     *          'submenus' =&gt; [
+     *                 [
+     *                     'title' =&gt; 'Tests',
+     *                     'route' =&gt; '/tests',
+     *                     'permission' =&gt; 'test view'
+     *                  ]
+     *               ],
+     *           ],
+     *       ],
+     *  ],
+     *
+     * This code below always changes when you use a generator and maybe you must lint or format the code.
+     */
+    'sidebars' =&gt; [
+        [
+            'header' =&gt; 'Main',
+            'permissions' =&gt; [
+                'test view'
+            ],
+            'menus' =&gt; [
+                [
+                    'title' =&gt; 'Main Data',
+                    'icon' =&gt; '&lt;i class="bi bi-collection-fill"&gt;&lt;/i&gt;',
+                    'route' =&gt; null,
+                    'permission' =&gt; null,
+                    'permissions' =&gt; [
+                        'test view'
+                    ],
+                    'submenus' =&gt; [
+                        [
+                            'title' =&gt; 'Tests',
+                            'route' =&gt; '/tests',
+                            'permission' =&gt; 'test view'
+                        ]
+                    ]
+                ]
+            ]
+        ],
+        [
+            'header' =&gt; 'Users',
+            'permissions' =&gt; [
+                'user view',
+                'role &amp; permission view'
+            ],
+            'menus' =&gt; [
+                [
+                    'title' =&gt; 'Users',
+                    'icon' =&gt; '&lt;i class="bi bi-people-fill"&gt;&lt;/i&gt;',
+                    'route' =&gt; '/users',
+                    'permission' =&gt; 'user view',
+                    'permissions' =&gt; [],
+                    'submenus' =&gt; []
+                ],
+                [
+                    'title' =&gt; 'Roles &amp; permissions',
+                    'icon' =&gt; '&lt;i class="bi bi-person-check-fill"&gt;&lt;/i&gt;',
+                    'route' =&gt; '/roles',
+                    'permission' =&gt; 'role &amp; permission view',
+                    'permissions' =&gt; [],
+                    'submenus' =&gt; []
+                ]
+            ]
+        ],
+    ],
+];
+</code></pre>
 
 
 
@@ -452,6 +765,44 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../features/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Features" rel="prev">
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Previous
+                </span>
+                Features
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../how_to_contribute/" class="md-footer__link md-footer__link--next" aria-label="Next: How To Contribute" rel="next">
+            <div class="md-footer__title">
+              <div class="md-ellipsis">
+                <span class="md-footer__direction">
+                  Next
+                </span>
+                How To Contribute
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -498,7 +849,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.prune", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["announce.dismiss", "content.code.annotate", "content.tabs.link", "content.tooltips", "navigation.expand", "navigation.indexes", "navigation.instant", "navigation.prune", "navigation.sections", "navigation.tabs.sticky", "navigation.top", "navigation.footer", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.follow", "toc.integrate", "content.code.copy"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.efa0ade1.min.js"></script>
