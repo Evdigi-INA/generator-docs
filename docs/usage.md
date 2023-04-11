@@ -48,16 +48,53 @@ There is rules you must be followed if you want create a a relation:
         - On delete: `nothing, cascade, restrict, null`
 
 
-> Make sure related table & model already exist, if its no then the selected field for showing in `select`/`datalist` is an `id` by default selected field is second column in related table.
+> Make sure related table & model already exist, if its no then the selected field for showing in `select`/`datalist` is an `id`, by default selected field is second column in related table.
 
 ## Create Upload File
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem dapibus faucibus. Aenean eu magna sodales augue efficitur porttitor eget a mi. Aenean pulvinar sit amet tellus sit amet placerat. Fusce pulvinar suscipit lacus, ut fermentum nulla efficitur a.
+![Upload File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
+
+Set column type to `string`, input type to `file`, select file type (for now only support image), fill the max size(optional), and default value (must be a valid link), also we use [Intervention Image](https://image.intervention.io/v2) for manipulating uploaded image. all setting for image avaiable at `config/generator.php`.
+
+Default image configuration:
+```php
+'image' => [
+    /**
+    * Path for store the image.
+    *
+    * avaiable options:
+    * 1. public
+    * 2. storage
+    */
+    'path' => 'storage',
+
+    /**
+    * Will used if image is nullable and default value is null.
+    */
+    'default' => 'https://via.placeholder.com/350?text=No+Image+Avaiable',
+
+    /**
+    * Crop the uploaded image using intervention image.
+    */
+    'crop' => true,
+
+    /**
+    * When set to true the uploaded image aspect ratio will still original.
+    */
+    'aspect_ratio' => true,
+
+    /**
+    * Crop image size.
+    */
+    'width' => 500,
+    'height' => 500,
+],
+```
 
 > if you are using `storage` for store the image, make sure you run `php artisan storage:link`
 
 
-## Create sidebar menu
+## Create Sidebar Menu
 
 ![Create sidebar menu](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
 
@@ -66,6 +103,24 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id lacus id sem d
 You can easily create a dynamic sidebar menus  with just a few input. all sidebar menus configuration place in `config/generator.php`
 
 How about i dont need dynamic sidebar menu, i just want create my menu in `blade`? yeah we provide it, [click here how to do it](/generator-docs/features/#set-the-sidebar-menu).
+
+
+## Role & Permissions
+
+While you are using the full version, after create new module will automatically generate some permissions and assign to role `admin`. all permissions store in `config/permission.php`
+
+Here an example:
+```php
+[
+    'group' => 'products',
+    'access' => [
+        'product view',
+        'product create',
+        'product edit',
+        'product delete'
+    ]
+],
+```
 
 
 ## Configuration

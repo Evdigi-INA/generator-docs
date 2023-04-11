@@ -1,3 +1,3 @@
-[Star the repository](https://github.com/Evdigi-INA/generator)
+For now just [Star/fork the repository](https://github.com/Evdigi-INA/generator).
 
-## Coming soon
+## Coming Soon
