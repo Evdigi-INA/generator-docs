@@ -5,7 +5,7 @@
 </video>
 
 ## The Reason
-We have a bit of time to build <s>master</s> main data over and over again, therefore this package may let you focus on your core features application, Instead, you might use that time to sleep, play video games, or, since it's Ramadhan, pray to Allah ﷻ and Prophet Muhammad ﷺ
+We have a bit of time to build <s>master</s> main data over and over again, therefore this package may let you focus on your core features application, Instead, you might use that time to sleep, or even play video games.
 
 ## Upgrade Guide
 Currently, we don't have any upgrade guide for this time. But, we will make it soon if we have any breaking changes. Enjoy!

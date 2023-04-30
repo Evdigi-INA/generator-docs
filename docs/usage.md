@@ -39,22 +39,22 @@ For now is only support [One To Many (Inverse) / Belongs To](https://laravel.com
 There is rules you must be followed if you want create a a relation:
 
 - Field name: 
-    - Must be table name but in singular + `_id`, eg: we have `users` table then its must be `user_id`.
+    - Must be the table name but in singular + `_id`, eg: if we have a `users` table then it must be a `user_id`.
 - Column Type:
     - Change to `foreignId`.
-    - For constrain or related model name, you can fill with table name or model namespcae.
+    - For constrain or related model name, you can fill with table name (automatically change to plural).
     - Action on update & delete:
         - On update: `nothing, cascade, restrict`
         - On delete: `nothing, cascade, restrict, null`
 
 
-> Make sure related table & model already exist, if its no then the selected field for showing in `select`/`datalist` is an `id`, by default selected field is second column in related table.
+> Make sure the related table & model already exist, if its no then the selected field for showing in `select`/`datalist` is an `id`, by default selected field is second column in related table.
 
 ## Create Upload File
 
 ![Upload File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
 
-Set column type to `string`, input type to `file`, select file type (for now only support image), fill the max size(optional), and default value (must be a valid link), also we use [Intervention Image](https://image.intervention.io/v2) for manipulating uploaded image. all setting for image avaiable at `config/generator.php`.
+Set column type to `string`, input type to `file`, select file type (for now only support image), fill the max size(optional), and default value (must be a valid link), also we use [Intervention Image](https://image.intervention.io/v2) for manipulating uploaded image. all setting for images are available at `config/generator.php`.
 
 Default image configuration:
 ```php
@@ -100,14 +100,14 @@ Default image configuration:
 
 > This feature only avaiable in full version.
 
-You can easily create a dynamic sidebar menus  with just a few input. all sidebar menus configuration place in `config/generator.php`
+You can easily create a dynamic sidebar menu with just a few inputs. all sidebar menus configuration are placed in `config/generator.php`
 
-How about i dont need dynamic sidebar menu, i just want create my menu in `blade`? yeah we provide it, [click here how to do it](/generator-docs/features/#set-the-sidebar-menu).
+How about I don't need a dynamic sidebar menu, I just want to create my menu in `blade`. yeah, we provide it, [click here how to do it](/generator-docs/features/#set-the-sidebar-menu).
 
 
 ## Role & Permissions
 
-While you are using the full version, after create new module will automatically generate some permissions and assign to role `admin`. all permissions store in `config/permission.php`
+While you are using the full version, after creating a new module will automatically generate some permissions and assign them to the role `admin`. all permissions are stored in `config/permission.php`
 
 Here an example:
 ```php
@@ -121,7 +121,6 @@ Here an example:
     ]
 ],
 ```
-
 
 ## Configuration
 
