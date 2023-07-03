@@ -5,24 +5,31 @@
 </video>
 
 ## The Reason
-We have a bit of time to build <s>master</s> main data over and over again, therefore this package may let you focus on your core features application, Instead, you might use that time to sleep, or even play video games.
+
+We have a bit of time to build <s>master</s> main data over and over again, therefore this package may let you focus on your core features application, Instead, you might use that time to sleep, play video games, or touch some grass.
 
 ## Upgrade Guide
+
 Currently, we don't have any upgrade guide for this time. But, we will make it soon if we have any breaking changes. Enjoy!
 
 ## Who We Are
+
 We're just bunch of people working on side project (freelance) developer based in Bekasi, Indonesia. We want to make a difference in the world by helping people making their own projects via open source and free software such like our creation.
 
 ## Pricing
+
 Nope, it's 100% free & open source.
 
 ## License
+
 MIT.
 
 ## Sponsors
+
 <s>Space is available, lmao.</s>
 
 ## Contributors
+
 Thank you to all our fellow contributors.
 
 <a  href="https://github.com/Evdigi-INA/generator/graphs/contributors">
