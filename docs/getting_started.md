@@ -33,7 +33,7 @@ Register the provider in `config/app.php`
 App\Providers\ViewComposerServiceProvider::class,
 ```
   
-Then goes to ```/simple-generators/create/```
+Then go to ```/simple-generators/create/```
   
 <hr>
 
@@ -82,7 +82,7 @@ Run migration and seeder
 php artisan migrate --seed
 ```
 
-Then goes to ```/generators/create```
+Then go to ```/generators/create```
 
 Account
 

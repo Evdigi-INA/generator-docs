@@ -21,7 +21,7 @@ To contribute to this project, please follow the following steps:
         "EvdigiIna\\Generator\\": "packages/evdigi-ina/generator/src/"
     },
     "files": [
-        "packages/evdigi-ina/generator/src/Helpers/helper.php"
+        "packages/evdigi-ina/generator/src/helper.php"
     ]
 },
 ```

@@ -7,7 +7,7 @@
     - Model casting
     - Image upload ([Intervention Image](https://image.intervention.io/v2))
     - Support [HTML 5 Input](https://developer.mozilla.org/en-US/docs/Learn/Forms/HTML5_input_types)
-    - Request validations supported: `required, in, image, min, max, string, email, number, date, exists, nullable, unique, comfirmed`  
+    - Request validations supported: `required, in, image, min, max, string, email, number, date, exists, nullable, unique, confirmed`  
 
 ### Full Version
   
@@ -22,7 +22,7 @@
     - 2FA Authentication
     - Update profile information 
 
-## Avaiable Commands
+## Available Commands
 
 ### Install The Generator
 Install Generator Variants (Simple/Full Version)
@@ -31,7 +31,7 @@ For simple version
 ```sh
 php artisan generator:install simple
 ```
-For full verion
+For full version
 ```sh
 php artisan generator:install full
 ```
@@ -63,205 +63,144 @@ is_active_menu(string|array $menu): boolean;
 
 ### Utility class
 
-All utility functions that you maybe need, are available in ```EvdigiIna\Generator\Generators\GeneratorUtils```
+All utility functions that you maybe need, are available in ```App\Generators\GeneratorUtils```
 
 ```php
-use EvdigiIna\Generator\Generators\GeneratorUtils;
+use App\Generators\GeneratorUtils;
 
 /**
-* Get template/stub file.
-*
-* @param string $path
-* @return string
+ * Get template/file.
 */
-GeneratorUtils::getTemplate(string $path): string
+public static function getTemplate(string $path): string;
 
 /**
-* Check folder if doesnt exist, then make folder.
-*
-* @param string $path
-* @return void
+* Get published files.
 */
-GeneratorUtils::checkFolder(string $path): void
+public static function getPublishedFiles(string $path): string;
 
 /**
-* Convert string to singular pascal case.
-*
-* @param string $string
-* @return string
+* Check folder if not exist, then make folder.
 */
-GeneratorUtils::singularPascalCase(string $string): string
+public static function checkFolder(string $path): void;
 
 /**
 * Convert string to singular pascal case.
-*
-* @param string $string
-* @return string
 */
-GeneratorUtils::pascalCase(string $string): string
+public static function singularPascalCase(string $string): string;
+
+/**
+* Convert string to singular pascal case.
+*/
+public static function pascalCase(string $string): string;
 
 /**
 * Convert string to plural pascal case.
-*
-* @param string $string
-* @return string
 */
-GeneratorUtils::pluralPascalCase(string $string): string
+public static function pluralPascalCase(string $string): string;
 
 /**
 * Convert string to plural snake case.
-*
-* @param string $string
-* @return string
 */
-GeneratorUtils::pluralSnakeCase(string $string): string
+public static function pluralSnakeCase(string $string): string;
 
 /**
 * Convert string to singular snake case.
-*
-* @param string $string
-* @return string
 */
-GeneratorUtils::singularSnakeCase(string $string): string
+public static function singularSnakeCase(string $string): string;
 
 /**
 * Convert string to plural pascal case.
-*
-* @param string $string
-* @return string
 */
-GeneratorUtils::pluralCamelCase(string $string): string
+public static function pluralCamelCase(string $string): string;
 
 /**
 * Convert string to singular pascal case.
-*
-* @param string $string
-* @return string
 */
-GeneratorUtils::singularCamelCase(string $string): string
+public static function singularCamelCase(string $string): string;
 
 /**
 * Convert string to plural, kebab case, and lowercase.
-*
-* @param string $string
-* @return string
 */
-GeneratorUtils::pluralKebabCase(string $string): string
+public static function pluralKebabCase(string $string): string;
 
 /**
-* Convert string kebab case, and lowercase.
-*
-* @param string $string
-* @return string
+* Convert string to kebab case, and lowercase.
 */
-GeneratorUtils::kebabCase(string $string): string
+public static function kebabCase(string $string): string;
 
 /**
 * Convert string to singular, kebab case, and lowercase.
-*
-* @param string $string
-* @return string
 */
-GeneratorUtils::singularKebabCase(string $string): string
+public static function singularKebabCase(string $string): string;
 
 /**
-* Convert string to singular, remove special caracters, and lowercase.
-*
-* @param string $string
-* @return string
+* Convert string to singular, remove special characters, and lowercase.
 */
-GeneratorUtils::cleanSingularLowerCase(string $string): string
+public static function cleanSingularLowerCase(string $string): string;
 
 /**
-* Remove special caracters, and lowercase.
-*
-* @param string $string
-* @return string
+* Remove special characters, and lowercase.
 */
-GeneratorUtils::cleanLowerCase(string $string): string
+public static function cleanLowerCase(string $string): string;
 
 /**
-* Convert string to plural, remove special caracters, and uppercase every first letters.
-*
-* @param string $string
-* @return string
+* Convert string to plural, remove special characters, and uppercase every first letters.
 */
-GeneratorUtils::cleanPluralUcWords(string $string): string
+public static function cleanPluralUcWords(string $string): string;
 
 /**
-* Convert string to singular, remove special caracters, and uppercase every first letters.
-*
-* @param string $string
-* @return string
+* Convert string to singular, remove special characters, and uppercase every first letters.
 */
-GeneratorUtils::cleanSingularUcWords(string $string): string
+public static function cleanSingularUcWords(string $string): string;
 
 /**
-* Remove special caracters, and uppercase every first letters.
-*
-* @param string $string
-* @return string
+* Remove special characters, and uppercase every first letters.
 */
-GeneratorUtils::cleanUcWords(string $string): string
+public static function cleanUcWords(string $string): string;
 
 /**
-* Convert string to plural, remove special caracters, and lowercase.
-*
-* @param string $string
-* @return string
+* Convert string to plural, remove special characters, and lowercase.
 */
-GeneratorUtils::cleanPluralLowerCase(string $string): string
+public static function cleanPluralLowerCase(string $string): string;
 
 /**
 * Get 1 column after id on the table.
-*
-* @param string $table
-* @return string $column
 */
-GeneratorUtils::getColumnAfterId(string $table): string
+public static function getColumnAfterId(string $table): string;
 
 /**
 * Select id and column after id on the table.
-*
-* @param string $table
-* @return string $selectedField
 */
-GeneratorUtils::selectColumnAfterIdAndIdItself(string $table): string
+public static function selectColumnAfterIdAndIdItself(string $table): string;
+
+/**
+* Get model location or path if contains '/'.
+*/
+public static function getModelLocation(string $model): string;
 
 /**
 * Converts camelCase string to have spaces between each.
-*
-* @param string $string
-* @return string
 */
-GeneratorUtils::fromCamelCase(string $string): string
-
+public static function fromCamelCase(string $string): string;
 /**
 * Set model name from the latest of array(if exists).
-*
-* @param string $model
-* @param string $style
-* @return string
 */
-GeneratorUtils::setModelName(string $model, string $style = 'pascal case'): string
+public static function setModelName(string $model, string $style = 'pascal case'): string;
 
 /**
 * Set default image and code to controller.
-*
-* @param null|string $default,
-* @param string $field
-* @param string $model
-* @return array
 */
-GeneratorUtils::setDefaultImage(null|string $default, string $field, string $model): array
+public static function setDefaultImage(null|string $default, string $field, string $model): array;
 
 /**
 * Convert array from config to string like array.
-*
-* @param array $idebars
-* @return string
 */
-GeneratorUtils::convertArraySidebarToString(array $sidebars): string
+public static function convertArraySidebarToString(array $sidebars): string;
+
+/**
+* Check if menu is active.
+*/
+public static function isActiveMenu(string|array $route): string;
 ```
 
 ### Things that we want to add in the future

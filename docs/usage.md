@@ -4,12 +4,12 @@ Go to ```/generators/create``` if yo're using [Full Version](/features#full-vers
 
 Below is table about supported input type & validation when you are using some column type.
 
-|Columm Type|Input Type|Validation|Length (min & max)|
+|Column Type|Input Type|Validation|Length (min & max)|
 |-----------|----------|----------|------------------|
 |`string`|`text, textarea, email, telephone, password url, search, file, hidden`|`required|string`| ✅ |
 |`integer`|`number, range, hidden`|`required|numeric`| ✅ |
 |`text`|`text, textarea, email, telephone, password url, search, file, hidden`|`required|string`| ✅ |
-|`booelan`|`radio, select, datalist`|`required|booelan`| ❌ |
+|`boolean`|`radio, select, datalist`|`required|boolean`| ❌ |
 |`char`|`text, color, week, email, telephone, password url, search, file, hidden`|`required|string`| ✅ |
 |`date`|`date, month`|`required|date`| ❌ |
 |`time`|`time`|`required|date`| ❌ |
@@ -17,7 +17,7 @@ Below is table about supported input type & validation when you are using some c
 |`dateTime`|`datetime-local`|`required|date`| ❌ |
 |`decimal`|`number, range, hidden`|`required|numeric`| ❌ |
 |`double`|`number, range, hidden`|`required|numeric`| ❌ |
-|`enum`|`select, readio, datalist`|`required|in`| ❌ |
+|`enum`|`select, radio, datalist`|`required|in`| ❌ |
 |`float`|`number, range, hidden`|`required|numeric`| ❌ |
 |`foreignId`|`select, datalist`|`required|exist`| ❌ |
 |`tinyInteger`|`number, range, hidden`|`required|numeric`| ❌ |
@@ -30,7 +30,7 @@ Below is table about supported input type & validation when you are using some c
 > `required` validation will change to `nullable` if you uncheck required switch in the form, if any input type `password` will automatically added `confirmed` validation, `min:1|max:100` for supported length column and `email|unique` for `email` input type.
 
 
-## Create Relation
+## Create a Relation
 
 ![Create Relation](https://user-images.githubusercontent.com/62506582/230761648-1ef36018-2486-424b-831f-ae5f74a66705.png)
 
@@ -50,7 +50,7 @@ There is rules you must be followed if you want create a a relation:
 
 > Make sure the related table & model already exist, if its no then the selected field for showing in `select`/`datalist` is an `id`, by default selected field is second column in related table.
 
-## Create Upload File
+## Create an Upload File
 
 ![Upload File](https://user-images.githubusercontent.com/62506582/231070943-cc1f13fd-0ee5-47f1-baaf-fb1e66e93ab5.png)
 
@@ -62,7 +62,7 @@ Default image configuration:
     /**
     * Path for store the image.
     *
-    * avaiable options:
+    * available options:
     * 1. public
     * 2. storage
     */
@@ -71,7 +71,7 @@ Default image configuration:
     /**
     * Will used if image is nullable and default value is null.
     */
-    'default' => 'https://via.placeholder.com/350?text=No+Image+Avaiable',
+    'default' => 'https://via.placeholder.com/350?text=No+Image+available',
 
     /**
     * Crop the uploaded image using intervention image.
@@ -94,11 +94,11 @@ Default image configuration:
 > if you are using `storage` for store the image, make sure you run `php artisan storage:link`
 
 
-## Create Sidebar Menu
+## Create a Sidebar Menu
 
 ![Create sidebar menu](https://user-images.githubusercontent.com/62506582/230722893-f11aae2c-4407-4eaf-803e-3b8491269e40.png)
 
-> This feature only avaiable in full version.
+> This feature only available in full version.
 
 You can easily create a dynamic sidebar menu with just a few inputs. all sidebar menus configuration are placed in `config/generator.php`
 
@@ -127,6 +127,8 @@ Here an example:
 Below is the default config for the generator and sidebar menus:
 
 ```php
+<?php
+
 return [
     /**
      * If any input file(image) as default will used options below.
@@ -135,7 +137,7 @@ return [
         /**
          * Path for store the image.
          *
-         * avaiable options:
+         * available options:
          * 1. public
          * 2. storage
          */
@@ -144,7 +146,7 @@ return [
         /**
          * Will used if image is nullable and default value is null.
          */
-        'default' => 'https://via.placeholder.com/350?text=No+Image+Avaiable',
+        'default' => 'https://via.placeholder.com/350?text=No+Image+available',
 
         /**
          * Crop the uploaded image using intervention image.
@@ -282,10 +284,33 @@ return [
                     'permission' => 'role & permission view',
                     'permissions' => [],
                     'submenus' => []
-                ]
+                ],
             ]
         ],
     ],
 ];
 
 ```
+
+## Production Setup
+
+Because this package is only installed in development, so some files will not be included in the production environment. so you must do the following steps:
+
+In `composer.json` add this code below:
+
+```json
+"autoload": {
+    "files": [
+        "App/Generators/helper.php"
+    ]
+},
+"extra": {
+    "laravel": {
+        "aliases": {
+            "GeneratorUtils": "App\\Generators\\GeneratorUtils",
+        }
+    }
+}
+```
+
+Then run `composer dump-autoload`.
