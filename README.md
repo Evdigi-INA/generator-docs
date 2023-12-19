@@ -5,7 +5,14 @@
 ### Installation
 
 - Clone the repository
-- [Install MkDocs](https://www.mkdocs.org/user-guide/installation/)
+- Install dependency
+  ```bash
+  pip install mkdocs
+  pip install mkdocs-material-extensions
+  pip install pymdown-extensions
+  pip install mkdocs-material
+  pip install mkdocs-macros-plugin
+  ```
 - Run `mkdocs serve` to start the live-reloading docs server.
 - Create a new branch, make changes, and submit a pull request.
 
