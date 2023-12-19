@@ -6,6 +6,7 @@
 
 - Clone the repository
 - [Install MkDocs](https://www.mkdocs.org/user-guide/installation/)
+- [Install Material for MkDocs](https://squidfunk.github.io/mkdocs-material/getting-started/)
 - Run `mkdocs serve` to start the live-reloading docs server.
 - Create a new branch, make changes, and submit a pull request.
 
