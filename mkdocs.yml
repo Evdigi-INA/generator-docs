@@ -1,4 +1,5 @@
 site_name: Generator Docs
+site_url: https://evdigi-ina.github.io/generator-docs/
 site_author: Zzzul and rachyharkov
 site_description: 
   Documentation for Laravel CRUD Generator
