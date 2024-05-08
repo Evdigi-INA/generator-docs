@@ -16,7 +16,7 @@ composer require evdigiina/generator --dev
 
 Only the generator, includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), and [Bootstrap 5](https://getbootstrap.com/).
 
-[View all features](/generator-docs/features)
+[View all features](features.md)
   
 Publish assets
 
@@ -43,7 +43,7 @@ Then go to ```/simple-generators/create/```
 
 The generator + starter app, includes: [Yajra Datatables](https://yajrabox.com/docs/laravel-datatables/master/installation), [Intervention Image](https://image.intervention.io/v2), [Laravel Fortify](https://laravel.com/docs/9.x/fortify), [Spatie Permission](https://spatie.be/docs/laravel-permission/v5/installation-laravel), and [Mazer Template](https://github.com/zuramai/mazer).
 
-[View all features](/generator-docs/features#full-version).
+[View all features](features.md#full-version).
 
 
 > Installing this package after a brand-new Laravel installation is necessary if you want to use the full version of it. because several files will be overwritten.

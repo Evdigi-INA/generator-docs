@@ -1,6 +1,6 @@
 ## Create your first CRUD
 
-Go to ```/generators/create``` if yo're using [Full Version](/features#full-version) or ```/simple-generators/create``` for [Simple Version](/features)
+Go to ```/generators/create``` if yo're using [Full Version](features.md#full-version) or ```/simple-generators/create``` for [Simple Version](features.md)
 
 Below is table about supported input type & validation when you are using some column type.
 
@@ -102,7 +102,7 @@ Default image configuration:
 
 You can easily create a dynamic sidebar menu with just a few inputs. all sidebar menus configuration are placed in `config/generator.php`
 
-How about I don't need a dynamic sidebar menu, I just want to create my menu in `blade`. yeah, we provide it, [click here how to do it](/generator-docs/features/#set-the-sidebar-menu).
+How about I don't need a dynamic sidebar menu, I just want to create my menu in `blade`. yeah, we provide it, [click here how to do it](features.md/#set-the-sidebar-menu).
 
 
 ## Role & Permissions
