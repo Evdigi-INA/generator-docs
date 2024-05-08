@@ -17,12 +17,13 @@ plugins:
 
 theme:
   name: material
+  custom_dir: overrides
   features:
     - announce.dismiss
     - content.code.annotate
     - content.tabs.link
     - content.tooltips
-    # - header.autohide
+    - header.autohide
     - navigation.expand
     - navigation.indexes
     - navigation.instant
