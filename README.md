@@ -8,6 +8,7 @@
 - Install dependency
   ```bash
   pip install mkdocs
+  pip install mike
   pip install mkdocs-material-extensions
   pip install pymdown-extensions
   pip install mkdocs-material
